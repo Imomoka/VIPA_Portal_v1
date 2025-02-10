@@ -1451,7 +1451,7 @@ pre {
   background-color: #262626;
   background-clip: padding-box;
   border: 1px solid #6c757d;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .form-control {
@@ -1529,7 +1529,7 @@ select.form-control:focus::-ms-value {
   padding: 0.25rem 0.5rem;
   font-size: 0.76562rem;
   line-height: 1.5;
-  border-radius: 0.2rem; }
+  border-radius: 0.5rem; }
 
 .form-control-lg {
   height: calc(1.5em + 1rem + 2px);
