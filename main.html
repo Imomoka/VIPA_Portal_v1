@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="./assets/images/vipa-icon.png">
-    <title>VIPA Portal</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css">
     <!-- Fonts CSS -->
@@ -24,13 +22,14 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="css/app-light.css" id="lightTheme" disabled>
     <link rel="stylesheet" href="css/app-dark.css" id="darkTheme">
+    <link rel="icon" href="./assets/images/vipa-icon.png">
+    <title>VIPA Portal</title>
   </head>
   <body class="vertical  dark">
     <div class="wrapper">
       <!--top nav-->
       <nav class="topnav navbar navbar-light sticky-top" style="background-color: #000000;">
         <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar" disabled>
-          <!-- <i class="fe fe-menu navbar-toggler-icon"></i> -->
         </button>
         <ul class="nav">
           <li class="nav-item nav-notif">
@@ -46,9 +45,7 @@
               </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">
-                
-                Profile</a>
+              <a class="dropdown-item" href="#">Profile</a>
               <a class="dropdown-item" href="#">Logout <i class="fe fe-log-out fe-16 float-right"></i></a>
             </div>
           </li>
@@ -88,15 +85,15 @@
             <span>Prospect Management</span>
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
-            <li class="nav-item w-100">
-              <a class="nav-link" href="main.html">
+            <li id="navContacts" class="nav-item w-100">
+              <a class="nav-link" href="#">
                 <i class="fe fe-user fe-16"></i>
                 <span class="ml-3 item-text">Contacts</span>
                 <span class="badge badge-pill badge-primary">New</span>
               </a>
             </li>
-            <li class="nav-item w-100">
-              <a class="nav-link" href="main.html">
+            <li id="navAgents" class="nav-item w-100">
+              <a class="nav-link" href="#">
                 <i class="fe fe-users fe-16"></i>
                 <span class="ml-3 item-text">Agents</span>
                 <span class="badge badge-pill badge-primary">New</span>
@@ -133,7 +130,7 @@
             <span>Documentation</span>
           </p>
           <ul class="navbar-nav flex-fill w-100 mb-2">
-            <li class="nav-item w-100">
+            <li id="navSupport" class="nav-item w-100">
               <a class="nav-link" href="#">
                 <i class="fe fe-help-circle fe-16"></i>
                 <span class="ml-3 item-text">Getting Started</span>
@@ -143,9 +140,10 @@
           </ul>
 
         </nav>
-      </aside>
+      </aside><!--side nav-->
 
-      <main role="main" class="main-content">
+      <!--Page Content-->
+      <main id="main" role="main" class="main-content">
         <div id="dashboard" class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-12">
@@ -620,383 +618,389 @@
             </div> <!-- .col-12 -->
           </div> <!-- .row -->
         </div> <!-- .container-fluid -->
-        <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="list-group list-group-flush my-n3">
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-box fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Package has uploaded successfull</strong></small>
-                        <div class="my-0 text-muted small">Package is zipped and uploaded</div>
-                        <small class="badge badge-pill badge-light text-muted">1m ago</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-download fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Widgets are updated successfull</strong></small>
-                        <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
-                        <small class="badge badge-pill badge-light text-muted">2m ago</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-inbox fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Notifications have been sent</strong></small>
-                        <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
-                        <small class="badge badge-pill badge-light text-muted">30m ago</small>
-                      </div>
-                    </div> <!-- / .row -->
-                  </div>
-                  <div class="list-group-item bg-transparent">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <span class="fe fe-link fe-24"></span>
-                      </div>
-                      <div class="col">
-                        <small><strong>Link was attached to menu</strong></small>
-                        <div class="my-0 text-muted small">New layout has been attached to the menu</div>
-                        <small class="badge badge-pill badge-light text-muted">1h ago</small>
-                      </div>
-                    </div>
-                  </div> <!-- / .row -->
-                </div> <!-- / .list-group -->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
-        <div id="submitsaleModal" class="modal fade modal-full" tabindex="-1" role="dialog"  aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <button aria-label="" type="button" class="close p-2" data-dismiss="modal" aria-hidden="true">
-            <span aria-hidden="true">EXIT</span>
-          </button>
-          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-sm" id="submitsaleModalLabel">Inventory Record</h5>
-              </div>
-              <div class="modal-body">
-                <div class="rounded bg-primary1 p-4 mb-4" >
-                  <p class="text-sm font-weight-bold">Appointment Result</p>
-                  <!--appointment result option-->
-                  <div class="border-top p-2 my-2">
-                    <div class="form-group">
-                      <label for="pmsApptresult" class="text-xs text-500 m-0">What is the result of your appointment?*</label>
-                      <select class="form-control form-control-sm" id="pmsApptresult" data-live-search="true"> 
-                          <option value="" selected disabled>Please select</option>
-                          <option>Sent to Underwriting</option>
-                          <option>Follow-Up</option>
-                          <option>Instant Approval</option>
-                          <option>Not Interested</option>
-                      </select>
+
+      </main> <!-- Page Content -->
+
+      <!--Modals/Popups-->
+      <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group list-group-flush my-n3">
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-box fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Package has uploaded successfull</strong></small>
+                      <div class="my-0 text-muted small">Package is zipped and uploaded</div>
+                      <small class="badge badge-pill badge-light text-muted">1m ago</small>
                     </div>
                   </div>
                 </div>
-                  <div class="row d-flex justify-content-evenly">
-                    <!--Contact Information-->
-                    <div class="col p-4 bg-primary1 rounded mx-4">
-                      <p class="text-sm font-weight-bold">Contact Information</p>
-                      <div class="border-top my-2 p-2">
-                        <!--lead type-->
-                        <div class="form-group">
-                          <label for="pmsLeadType" class="text-xs text-500 m-0">Lead Type</label>
-                          <select class="form-control form-control-sm" id="pmsLeadType">
-                              <option value="" selected disabled>Please select</option>
-                              <option>General</option>
-                              <option>Final Expense</option>
-                              <option>Mortgage</option>
-                              <option>IUL</option>
-                              <option>Annuity</option>
-                              <option>Other</option>
-                          </select>
-                        </div>
-                      </div>
-                      
-                      <div class="row d-flex align-items-center my-2">
-                        <div class="col-md-6">
-                          <!--first name-->
-                          <div class="form-group mb-0">
-                            <label for="pmsFirstName" class="text-xs text-500 m-0">First Name</label>
-                            <input type="text" class="form-control form-control-sm" id="pmsFirstName" required>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <!--last name-->
-                          <div class="form-group mb-0">
-                            <label for="pmsLastName" class="text-xs text-500 m-0">Last Name</label>
-                            <input type="text" class="form-control form-control-sm" id="pmsLastName" required>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row d-flex align-items-center my-2">
-                        <div class="col-md-6">
-                          <!--Phone-->
-                          <div class="form-group mb-0">
-                            <label for="pmsPhone" class="text-xs text-500 m-0">Phone</label>
-                            <input id="pmsPhone" placeholder="(987) 654-3210" class="form-control form-control-sm input-phoneus" maxlength="14" required>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <!--email-->
-                          <div class="form-group mb-0">
-                            <label for="pmsEmail" class="text-xs text-500 m-0">Email</label>
-                            <input type="email" class="form-control form-control-sm" id="pmsEmail">
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row d-flex align-items-center my-2">
-                        <div class="col-md-6">
-                          <!--birthday-->
-                          <div class="form-group mb-0">
-                            <label for="pmsBirthday" class="text-xs text-500 m-0">Birthday</label>
-                            <input type="date" class="form-control form-control-sm" id="pmsBirthday">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <!--beneficiary-->
-                          <div class="form-group mb-0">
-                            <label for="pmsBeneficiary" class="text-xs text-500 m-0">Beneficiary</label>
-                            <input type="text" class="form-control form-control-sm" id="pmsBeneficiary">
-                          </div>
-                        </div>
-                      </div>
-                      <!--base information-->
-                      <div id="base-groupinfo" class="my-4 bg-secondary p-4 mb-2 border-radius-lg d-none">
-                        <p class="text-xs text-bold text-white">Base Information</p>
-                        <!--face amount-->
-                        <div class="border-top my-4">
-                          <div class="form-group mb-0">
-                            <label for="pmsfaceamount" class="text-xs text-500 m-0 text-white">Face Amount(Coverage Amount Requested)</label>
-                            <input type="number" class="form-control form-control-sm" id="pmsfaceamount">
-                          </div>
-                        </div>
-                      </div>
-
-                      <!--mortgage group info-->
-                        <div id="mortgage-groupinfo" class="my-4 bg-secondary p-4 mb-2 border-radius-lg d-none">
-                          <p class="text-xs text-bold text-white">Mortgage Information</p>
-                          <div class="row d-flex align-items-center my-2">
-                            <div class="col-md-6">
-                              <!--loan amount-->
-                              <div class="form-group mb-0">
-                                  <label for="pmsLoanamount" class="text-xs text-500 m-0 text-white">Loan Amount</label>
-                                  <input type="number" class="form-control form-control-sm" id="pmsLoanamount">
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <!--length of loan-->
-                              <div class="form-group mb-0">
-                                <label for="pmsLengthloan" class="text-xs text-500 m-0 text-white">Length of Loan</label>
-                                <input type="number" class="form-control form-control-sm" id="pmsLengthloan">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row d-flex align-items-center my-2">
-                            <div class="col-md-6">
-                              <!--Monthly Mortgage Payment-->
-                              <div class="form-group mb-0">
-                                  <label for="pmsMonthlymortgagepayment" class="text-xs text-500 m-0 text-white">Monthly Mortgage Payment</label>
-                                  <input type="number" class="form-control form-control-sm" id="pmsMonthlymortgagepayment">
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <!--Length of Loan Left-->
-                              <div class="form-group mb-0">
-                                <label for="pmsLengthloanleft" class="text-xs text-500 m-0 text-white">Length of Loan Left</label>
-                                <input type="number" class="form-control form-control-sm" id="pmsLengthloanleft">
-                              </div>
-                            </div>
-                          </div>
-                          <!--house value-->
-                          <div class="border-top my-4">
-                            <div class="form-group mb-0">
-                              <label for="pmsHousevalue" class="text-xs text-500 m-0 text-white">House Value</label>
-                              <input type="number" class="form-control form-control-sm" id="pmsHousevalue">
-                            </div>
-                          </div>
-                        </div>
-                      
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-download fe-24"></span>
                     </div>
-
-                    <!--Policy Information-->
-                    <div class="col p-4 bg-primary1 rounded mx-4">
-                      <p class="text-sm font-weight-bold">Policy Information</p>
-                      <!--Policy Number-->
-                      <div class="border-top p-2 my-2">
-                        <div class="form-group mb-0">
-                          <label for="pmsPolicyno" class="text-xs text-500 m-0">Policy Number</label>
-                          <input type="text" class="form-control form-control-sm" id="pmsPolicyno">
-                        </div>
-                      </div>
-                      
-                      <div class="row d-flex align-items-center my-2">
-                        <div class="col-md-6">
-                          <!--carrier-->
-                            <div class="form-group">
-                              <label for="pmsCarrier">Carrier</label>
-                              <select class="form-control select2" id="pmsCarrier">
-                                <option value="" selected disabled>Please select</option>
-                                <option value="Aetna">Aetna</option>
-                                <option value="Aflac">Aflac</option>
-                                <option value="AIG/Corebridge">AIG/Corebridge</option>
-                                <option value="American Amicable">American Amicable</option>
-                                <option value="American Home Life">American Home Life</option>
-                                <option value="Americo">Americo</option>
-                                <option value="Athene">Athene</option>
-                                <option value="Baltimore Life">Baltimore Life</option>
-                                <option value="Bankers Fidelity">Bankers Fidelity</option>
-                                <option value="Catholic Financial">Catholic Financial</option>
-                                <option value="CFG">CFG</option>
-                                <option value="CICA">CICA</option>
-                                <option value="Cincinnati">Cincinnati</option>
-                                <option value="Ethos">Ethos</option>
-                                <option value="Foresters">Foresters</option>
-                                <option value="Gerber Life">Gerber Life</option>
-                                <option value="Great Western">Great Western</option>
-                                <option value="GTL">GTL</option>
-                                <option value="Prosperity">Prosperity</option>
-                                <option value="Illinois Mutual">Illinois Mutual</option>
-                                <option value="InstaBrain (Term)">InstaBrain (Term)</option>
-                                <option value="John Hancock">John Hancock</option>
-                                <option value="Kansas City Life">Kansas City Life</option>
-                                <option value="Lafayette Life">Lafayette Life</option>
-                                <option value="Liberty Bankers">Liberty Bankers</option>
-                                <option value="Manhattan Life">Manhattan Life</option>
-                                <option value="Mutual of Omaha">Mutual of Omaha</option>
-                                <option value="National Life Group">National Life Group</option>
-                                <option value="North American">North American</option>
-                                <option value="Occidental Life">Occidental Life</option>
-                                <option value="Polish Falcons">Polish Falcons</option>
-                                <option value="Quility">Quility</option>
-                                <option value="SBLI">SBLI</option>
-                                <option value="Transamerica">Transamerica</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                          <!--Type of policy-->
-                          <div class="form-group">
-                            <label for="pmsTypeofpolicy">Type Of Policy</label>
-                            <select class="form-control select2" id="pmsTypeofpolicy">
-                              <option value="" selected disabled>Please select</option>
-                                  <option value="Term">Term</option>
-                                  <option value="Final Expense">Final Expense</option>
-                                  <option value="Universal Life">Universal Life</option>
-                                  <option value="Annuity">Annuity</option>
-                                  <option value="Accidental">Accidental</option>
-                            </select>
-                          </div> <!-- form-group -->
-                        </div>
-                      </div>
-
-                      <div class="row d-flex align-items-center my-2">
-                        <div class="col-md-6">
-                          <!--Initial Draft-->
-                          <div class="form-group mb-0">
-                            <label for="pmsInitialDraft" class="text-xs text-500 m-0">Initial Draft Date</label>
-                            <input type="date" class="form-control form-control-sm" id="pmsInitialDraft">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <!--Recurring Draft-->
-                          <div class="form-group mb-0">
-                            <label for="pmsRecurringDraft" class="text-xs text-500 m-0">Recurring Draft Date</label>
-                            <input type="date" class="form-control form-control-sm" id="pmsRecurringDraft">
-                          </div>
-                        </div>
-                      </div>
-                      <!--monthly premium-->
-                      <div class="my-2">
-                        <div class="form-group mb-0">
-                          <label for="pmsMonthlyprem" class="text-xs text-500 m-0">Policy Monthly Premium</label>
-                          <input type="number" class="form-control form-control-sm" id="pmsMonthlyprem">
-                        </div>
-                      </div>
-
-                      <!--notify client-->
-                      <div class="my-2">
-                        <div class="form-group mb-0">
-                          <label for="pmsNotifyclient" class="text-xs text-500 m-0">Notify Client?</label>
-                          <select class="form-control form-control-sm mb-2" id="pmsNotifyclient">
-                              <option value="" selected disabled>Please select</option>
-                              <option>Yes</option>
-                              <option>No</option>
-                          </select>
-                          <p class="text-xxs text-muted">Do You Want Your Client To Receive An Email With An Appointment Recap & On Holidays?</p>
-                        </div>
-                      </div>
-                      
-                      <!--Agent Split-->
-                      <div class="my-4 bg-light p-4 mb-2 rounded">
-                        <div class="form-group mb-0">
-                          <label for="pmsAgentsplitconfirm" class="text-xs text-500 m-0">Was there an Agent Split on this policy</label>
-                          <select class="form-control form-control-sm mb-2" id="pmsAgentsplitconfirm">
-                              <option value="" selected disabled>Please select</option>
-                              <option>Yes</option>
-                              <option>No</option>
-                          </select>
-                          <p class="text-xxs text-muted">Do You Want Your Client To Receive An Email With An Appointment Recap & On Holidays?</p>
-                        </div>
-                        <div id="split-groupinfo" class="">
-                          <div class="my-2">
-                            <!--split amount-->
-                            <div class="form-group mb-0">
-                              <label for="pmsSplitamount" class="text-xs text-500 m-0">What Split % Are You Getting?</label>
-                              <input type="number" class="form-control form-control-sm" id="pmsSplitamount">
-                            </div>
-                          </div>
-                          <div class="my-2">
-                            <!--carrier-->
-                            <div class="form-group mb-0">
-                              <label for="pmsSplitagent" class="text-xs text-500 m-0">Name of Agent on Split</label>
-                              <input type="text" class="form-control form-control-sm" id="pmsSplitagent">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      
+                    <div class="col">
+                      <small><strong>Widgets are updated successfull</strong></small>
+                      <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
+                      <small class="badge badge-pill badge-light text-muted">2m ago</small>
                     </div>
-                    
-                  </div>  
-
-               
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Close</button>
-                <button id="pmsCreatebtn" type="button" class="btn mb-2 btn-primary">Create Record</button>
-              </div>
+                  </div>
+                </div>
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-inbox fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Notifications have been sent</strong></small>
+                      <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
+                      <small class="badge badge-pill badge-light text-muted">30m ago</small>
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-link fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Link was attached to menu</strong></small>
+                      <div class="my-0 text-muted small">New layout has been attached to the menu</div>
+                      <small class="badge badge-pill badge-light text-muted">1h ago</small>
+                    </div>
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .list-group -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All</button>
             </div>
           </div>
-        </div> <!-- small modal -->
+        </div>
+      </div>
+
+      <!--Submit Sale-->
+      <div id="submitsaleModal" class="modal fade modal-full" tabindex="-1" role="dialog"  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <button aria-label="" type="button" class="close p-2" data-dismiss="modal" aria-hidden="true">
+          <span aria-hidden="true">EXIT</span>
+        </button>
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-sm" id="submitsaleModalLabel">Inventory Record</h5>
+            </div>
+            <div class="modal-body">
+              <div class="rounded bg-primary1 p-4 mb-4" >
+                <p class="text-sm font-weight-bold">Appointment Result</p>
+                <!--appointment result option-->
+                <div class="border-top p-2 my-2">
+                  <div class="form-group">
+                    <label for="pmsApptresult" class="text-xs text-500 m-0">What is the result of your appointment?*</label>
+                    <select class="form-control form-control-sm" id="pmsApptresult" data-live-search="true"> 
+                        <option value="" selected disabled>Please select</option>
+                        <option>Sent to Underwriting</option>
+                        <option>Follow-Up</option>
+                        <option>Instant Approval</option>
+                        <option>Not Interested</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+                <div class="row d-flex justify-content-evenly">
+                  <!--Contact Information-->
+                  <div class="col p-4 bg-primary1 rounded mx-4">
+                    <p class="text-sm font-weight-bold">Contact Information</p>
+                    <div class="border-top my-2 p-2">
+                      <!--lead type-->
+                      <div class="form-group">
+                        <label for="pmsLeadType" class="text-xs text-500 m-0">Lead Type</label>
+                        <select class="form-control form-control-sm" id="pmsLeadType">
+                            <option value="" selected disabled>Please select</option>
+                            <option>General</option>
+                            <option>Final Expense</option>
+                            <option>Mortgage</option>
+                            <option>IUL</option>
+                            <option>Annuity</option>
+                            <option>Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="row d-flex align-items-center my-2">
+                      <div class="col-md-6">
+                        <!--first name-->
+                        <div class="form-group mb-0">
+                          <label for="pmsFirstName" class="text-xs text-500 m-0">First Name</label>
+                          <input type="text" class="form-control form-control-sm" id="pmsFirstName" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <!--last name-->
+                        <div class="form-group mb-0">
+                          <label for="pmsLastName" class="text-xs text-500 m-0">Last Name</label>
+                          <input type="text" class="form-control form-control-sm" id="pmsLastName" required>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row d-flex align-items-center my-2">
+                      <div class="col-md-6">
+                        <!--Phone-->
+                        <div class="form-group mb-0">
+                          <label for="pmsPhone" class="text-xs text-500 m-0">Phone</label>
+                          <input id="pmsPhone" placeholder="(987) 654-3210" class="form-control form-control-sm input-phoneus" maxlength="14" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <!--email-->
+                        <div class="form-group mb-0">
+                          <label for="pmsEmail" class="text-xs text-500 m-0">Email</label>
+                          <input type="email" class="form-control form-control-sm" id="pmsEmail">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row d-flex align-items-center my-2">
+                      <div class="col-md-6">
+                        <!--birthday-->
+                        <div class="form-group mb-0">
+                          <label for="pmsBirthday" class="text-xs text-500 m-0">Birthday</label>
+                          <input type="date" class="form-control form-control-sm" id="pmsBirthday">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <!--beneficiary-->
+                        <div class="form-group mb-0">
+                          <label for="pmsBeneficiary" class="text-xs text-500 m-0">Beneficiary</label>
+                          <input type="text" class="form-control form-control-sm" id="pmsBeneficiary">
+                        </div>
+                      </div>
+                    </div>
+                    <!--base information-->
+                    <div id="base-groupinfo" class="my-4 bg-secondary p-4 mb-2 border-radius-lg d-none">
+                      <p class="text-xs text-bold text-white">Base Information</p>
+                      <!--face amount-->
+                      <div class="border-top my-4">
+                        <div class="form-group mb-0">
+                          <label for="pmsfaceamount" class="text-xs text-500 m-0 text-white">Face Amount(Coverage Amount Requested)</label>
+                          <input type="number" class="form-control form-control-sm" id="pmsfaceamount">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--mortgage group info-->
+                      <div id="mortgage-groupinfo" class="my-4 bg-secondary p-4 mb-2 border-radius-lg d-none">
+                        <p class="text-xs text-bold text-white">Mortgage Information</p>
+                        <div class="row d-flex align-items-center my-2">
+                          <div class="col-md-6">
+                            <!--loan amount-->
+                            <div class="form-group mb-0">
+                                <label for="pmsLoanamount" class="text-xs text-500 m-0 text-white">Loan Amount</label>
+                                <input type="number" class="form-control form-control-sm" id="pmsLoanamount">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <!--length of loan-->
+                            <div class="form-group mb-0">
+                              <label for="pmsLengthloan" class="text-xs text-500 m-0 text-white">Length of Loan</label>
+                              <input type="number" class="form-control form-control-sm" id="pmsLengthloan">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row d-flex align-items-center my-2">
+                          <div class="col-md-6">
+                            <!--Monthly Mortgage Payment-->
+                            <div class="form-group mb-0">
+                                <label for="pmsMonthlymortgagepayment" class="text-xs text-500 m-0 text-white">Monthly Mortgage Payment</label>
+                                <input type="number" class="form-control form-control-sm" id="pmsMonthlymortgagepayment">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <!--Length of Loan Left-->
+                            <div class="form-group mb-0">
+                              <label for="pmsLengthloanleft" class="text-xs text-500 m-0 text-white">Length of Loan Left</label>
+                              <input type="number" class="form-control form-control-sm" id="pmsLengthloanleft">
+                            </div>
+                          </div>
+                        </div>
+                        <!--house value-->
+                        <div class="border-top my-4">
+                          <div class="form-group mb-0">
+                            <label for="pmsHousevalue" class="text-xs text-500 m-0 text-white">House Value</label>
+                            <input type="number" class="form-control form-control-sm" id="pmsHousevalue">
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </div>
+
+                  <!--Policy Information-->
+                  <div class="col p-4 bg-primary1 rounded mx-4">
+                    <p class="text-sm font-weight-bold">Policy Information</p>
+                    <!--Policy Number-->
+                    <div class="border-top p-2 my-2">
+                      <div class="form-group mb-0">
+                        <label for="pmsPolicyno" class="text-xs text-500 m-0">Policy Number</label>
+                        <input type="text" class="form-control form-control-sm" id="pmsPolicyno">
+                      </div>
+                    </div>
+                    
+                    <div class="row d-flex align-items-center my-2">
+                      <div class="col-md-6">
+                        <!--carrier-->
+                          <div class="form-group">
+                            <label for="pmsCarrier">Carrier</label>
+                            <select class="form-control select2" id="pmsCarrier">
+                              <option value="" selected disabled>Please select</option>
+                              <option value="Aetna">Aetna</option>
+                              <option value="Aflac">Aflac</option>
+                              <option value="AIG/Corebridge">AIG/Corebridge</option>
+                              <option value="American Amicable">American Amicable</option>
+                              <option value="American Home Life">American Home Life</option>
+                              <option value="Americo">Americo</option>
+                              <option value="Athene">Athene</option>
+                              <option value="Baltimore Life">Baltimore Life</option>
+                              <option value="Bankers Fidelity">Bankers Fidelity</option>
+                              <option value="Catholic Financial">Catholic Financial</option>
+                              <option value="CFG">CFG</option>
+                              <option value="CICA">CICA</option>
+                              <option value="Cincinnati">Cincinnati</option>
+                              <option value="Ethos">Ethos</option>
+                              <option value="Foresters">Foresters</option>
+                              <option value="Gerber Life">Gerber Life</option>
+                              <option value="Great Western">Great Western</option>
+                              <option value="GTL">GTL</option>
+                              <option value="Prosperity">Prosperity</option>
+                              <option value="Illinois Mutual">Illinois Mutual</option>
+                              <option value="InstaBrain (Term)">InstaBrain (Term)</option>
+                              <option value="John Hancock">John Hancock</option>
+                              <option value="Kansas City Life">Kansas City Life</option>
+                              <option value="Lafayette Life">Lafayette Life</option>
+                              <option value="Liberty Bankers">Liberty Bankers</option>
+                              <option value="Manhattan Life">Manhattan Life</option>
+                              <option value="Mutual of Omaha">Mutual of Omaha</option>
+                              <option value="National Life Group">National Life Group</option>
+                              <option value="North American">North American</option>
+                              <option value="Occidental Life">Occidental Life</option>
+                              <option value="Polish Falcons">Polish Falcons</option>
+                              <option value="Quility">Quility</option>
+                              <option value="SBLI">SBLI</option>
+                              <option value="Transamerica">Transamerica</option>
+                            </select>
+                          </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <!--Type of policy-->
+                        <div class="form-group">
+                          <label for="pmsTypeofpolicy">Type Of Policy</label>
+                          <select class="form-control select2" id="pmsTypeofpolicy">
+                            <option value="" selected disabled>Please select</option>
+                                <option value="Term">Term</option>
+                                <option value="Final Expense">Final Expense</option>
+                                <option value="Universal Life">Universal Life</option>
+                                <option value="Annuity">Annuity</option>
+                                <option value="Accidental">Accidental</option>
+                          </select>
+                        </div> <!-- form-group -->
+                      </div>
+                    </div>
+
+                    <div class="row d-flex align-items-center my-2">
+                      <div class="col-md-6">
+                        <!--Initial Draft-->
+                        <div class="form-group mb-0">
+                          <label for="pmsInitialDraft" class="text-xs text-500 m-0">Initial Draft Date</label>
+                          <input type="date" class="form-control form-control-sm" id="pmsInitialDraft">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <!--Recurring Draft-->
+                        <div class="form-group mb-0">
+                          <label for="pmsRecurringDraft" class="text-xs text-500 m-0">Recurring Draft Date</label>
+                          <input type="date" class="form-control form-control-sm" id="pmsRecurringDraft">
+                        </div>
+                      </div>
+                    </div>
+                    <!--monthly premium-->
+                    <div class="my-2">
+                      <div class="form-group mb-0">
+                        <label for="pmsMonthlyprem" class="text-xs text-500 m-0">Policy Monthly Premium</label>
+                        <input type="number" class="form-control form-control-sm" id="pmsMonthlyprem">
+                      </div>
+                    </div>
+
+                    <!--notify client-->
+                    <div class="my-2">
+                      <div class="form-group mb-0">
+                        <label for="pmsNotifyclient" class="text-xs text-500 m-0">Notify Client?</label>
+                        <select class="form-control form-control-sm mb-2" id="pmsNotifyclient">
+                            <option value="" selected disabled>Please select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <p class="text-xxs text-muted">Do You Want Your Client To Receive An Email With An Appointment Recap & On Holidays?</p>
+                      </div>
+                    </div>
+                    
+                    <!--Agent Split-->
+                    <div class="my-4 bg-light p-4 mb-2 rounded">
+                      <div class="form-group mb-0">
+                        <label for="pmsAgentsplitconfirm" class="text-xs text-500 m-0">Was there an Agent Split on this policy</label>
+                        <select class="form-control form-control-sm mb-2" id="pmsAgentsplitconfirm">
+                            <option value="" selected disabled>Please select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <p class="text-xxs text-muted">Do You Want Your Client To Receive An Email With An Appointment Recap & On Holidays?</p>
+                      </div>
+                      <div id="split-groupinfo" class="">
+                        <div class="my-2">
+                          <!--split amount-->
+                          <div class="form-group mb-0">
+                            <label for="pmsSplitamount" class="text-xs text-500 m-0">What Split % Are You Getting?</label>
+                            <input type="number" class="form-control form-control-sm" id="pmsSplitamount">
+                          </div>
+                        </div>
+                        <div class="my-2">
+                          <!--carrier-->
+                          <div class="form-group mb-0">
+                            <label for="pmsSplitagent" class="text-xs text-500 m-0">Name of Agent on Split</label>
+                            <input type="text" class="form-control form-control-sm" id="pmsSplitagent">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                  
+                </div>  
+
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Close</button>
+              <button id="pmsCreatebtn" type="button" class="btn mb-2 btn-primary">Create Record</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-      </main> <!-- main -->
 
     </div> <!-- .wrapper -->
     <script src="js/jquery.min.js"></script>
@@ -1031,7 +1035,6 @@
     <script src='js/dropzone.min.js'></script>
     <script src='js/uppy.min.js'></script>
     <script src='js/quill.min.js'></script>
-    <script src='js/vipa-charts.js'></script>
     <script>
       $('.select2').select2(
       {
@@ -1212,8 +1215,9 @@
         }, false);
       })();
     </script>
-
     <script src="js/apps.js"></script>
-
+    <!--VIPA JS-->
+    <script src='js/vipa/vipa-charts.js'></script>
+    <script src='js/vipa/load.js'></script>
   </body>
 </html>
