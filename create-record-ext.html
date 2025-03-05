@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Simple bar CSS -->
+        <link rel="stylesheet" href="css/simplebar.css">
+        <!-- Fonts CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Icons CSS -->
+        <link rel="stylesheet" href="css/feather.css">
+        <link rel="stylesheet" href="css/select2.css">
+        <link rel="stylesheet" href="css/dropzone.css">
+        <link rel="stylesheet" href="css/uppy.min.css">
+        <link rel="stylesheet" href="css/jquery.steps.css">
+        <link rel="stylesheet" href="css/jquery.timepicker.css">
+        <link rel="stylesheet" href="css/quill.snow.css">
+        <!-- Date Range Picker CSS -->
+        <link rel="stylesheet" href="css/daterangepicker.css">
+        <!-- App CSS -->
+        <link rel="stylesheet" href="css/app-light.css" id="lightTheme" disabled>
+        <link rel="stylesheet" href="css/app-dark.css" id="darkTheme">
+        <link rel="icon" href="./assets/images/vipa-icon.png">
+        <title>VIPA Portal</title>
+        <script src="js/vipa/createrecord.js"></script>
+    </head>
+
+    <body class="vertical  dark">
+        <div class="wrapper">
+            <!--top nav-->
+            <nav class="topnav navbar navbar-light sticky-top" style="background-color: #000000;">
+                <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar" disabled>
+                </button>
+            </nav>
+
+            <!--side nav-->
+            <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+                <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+                <i class="fe fe-x"><span class="sr-only"></span></i>
+                </a>
+                <nav class="vertnav navbar navbar-light">
+                <!-- nav bar -->
+                <div class="w-100 mb-2 d-flex">
+                    <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="#">
+                    <span class="avatar avatar-lg mt-2">
+                        <img src="./assets/images/vipa-icon.png" alt="..." class="avatar-img rounded-circle">
+                    </span>
+                    </a>
+                </div>
+                <p class="nav-heading mt-4 mb-2">
+                    <span>Documentation</span>
+                </p>
+                    <ul class="navbar-nav flex-fill w-100 mb-2">
+                        <li id="navSupport" class="nav-item w-100">
+                        <a class="nav-link" href="#">
+                            <i class="fe fe-help-circle fe-16"></i>
+                            <span class="ml-3 item-text">Getting Started</span>
+                            <span class="badge badge-pill badge-primary">coming soon</span>
+                        </a>
+                        </li>
+                    </ul>
+                    
+
+                </nav>
+            </aside><!--side nav-->
+
+            <!--Page Content-->
+            <main id="main" role="main" class="main-content">
+
+                <div id="createPMS" class="container-fluid">
+                    <div class="row justify-content-center">
+                        <!--container1-->
+                        <div class="col-10 mb-4">
+                            <!--Page Title-->
+                            <div class="mb-2">
+                                <div class="col">
+                                    <h2 class="h6 page-title">Create PMS Record</h2>
+                                </div>
+                            </div>
+
+                            <!--Prospect info-->
+                            <div class="row mb-4">
+                                <!--col1-->
+                                <div class="col-4">
+                                    <!--contact information card-->
+                                    <div class="card profile h-100">
+                                        <div class="card-header bg-warning-darker">
+                                            <strong class="card-title">Contact Information</strong>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row align-items-baseline">
+                                                <!--contact name-->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="pmsFirstName">First Name</label>
+                                                        <input type="text" class="form-control form-control-sm font-weight-bold" id="pmsFirstName" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="pmsLastName">Last Name</label>
+                                                        <input type="text" class="form-control form-control-sm font-weight-bold" id="pmsLastName" value="">
+                                                    </div>
+                                                </div>        
+                                            </div>
+    
+                                            <div class="row align-items-baseline">
+                                                <div class="col-md-6">
+                                                    <!--Phone-->
+                                                    <div class="form-group">
+                                                        <label for="pmsPhone">Phone</label>
+                                                        <input id="pmsPhone" placeholder="(987) 654-3210" class="form-control form-control-sm input-phoneus" maxlength="14" value=""required>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-md-6">
+                                                    <!--email-->
+                                                    <div class="form-group">
+                                                        <label for="pmsEmail">Email</label>
+                                                        <input type="email" class="form-control form-control-sm" id="pmsEmail" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <!--lead type-->
+                                            <div class="form-group">
+                                                <label for="pmsLeadType">Lead Type </label>
+                                                <select class="form-control form-control-sm" id="pmsLeadType">
+                                                    <option value="" selected disabled>Please select</option>
+                                                    <option value="general">General</option>
+                                                    <option value="finalexpense">Final Expense</option>
+                                                    <option value="mortgage">Mortgage</option>
+                                                    <option value="iul">IUL</option>
+                                                    <option value="annuity">Annuity</option>
+                                                    <option value="other">Other</option>
+                                                    <option value="annualreview">Annual Review</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="row align-items-baseline my-4">
+                                                <div class="col-md-6">
+                                                    <!--birthday-->
+                                                    <div class="form-group">
+                                                        <label for="pmsBirthday">Birthday</label>
+                                                        <input type="date" class="form-control form-control-sm" id="pmsBirthday">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!--beneficiary-->
+                                                    <div class="form-group">
+                                                        <label for="pmsBeneficiary">Beneficiary</label>
+                                                        <input type="text" class="form-control form-control-sm" id="pmsBeneficiary">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--base information-->
+                                            <div id="base-groupinfo" class="my-4 bg-secondary-dark p-4 rounded d-none">
+                                                <p class= "text-bold text-white">Base Information</p>
+                                                <!--face amount-->    
+                                                <div class="form-group mt-4">
+                                                    <label for="pmsfaceamount">Face Amount(Coverage Amount Requested)</label>
+                                                    <input type="number" class="form-control form-control-sm" id="pmsfaceamount">
+                                                </div>
+                                            </div>
+                                            <!--mortgage group info-->
+                                            <div id="mortgage-groupinfo" class="my-4 bg-secondary-dark p-4 rounded d-none">
+                                                <p class= "text-bold text-white">Mortgage Information</p>
+                                                <div class="row align-items-baseline">
+                                                    <div class="col-md-6">
+                                                        <!--loan amount-->
+                                                        <div class="form-group">
+                                                            <label for="pmsLoanamount">Loan Amount</label>
+                                                            <input type="number" class="form-control form-control-sm" id="pmsLoanamount">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <!--length of loan-->
+                                                        <div class="form-group">
+                                                            <label for="pmsLengthloan">Length of Loan</label>
+                                                            <input type="number" class="form-control form-control-sm" id="pmsLengthloan">
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="row align-items-baseline">
+                                                    <div class="col-md-6">
+                                                        <!--Monthly Mortgage Payment-->
+                                                        <div class="form-group">
+                                                            <label for="pmsMonthlymortgagepayment">Monthly Mortgage Payment</label>
+                                                            <input type="number" class="form-control form-control-sm" id="pmsMonthlymortgagepayment">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <!--Length of Loan Left-->
+                                                        <div class="form-group">
+                                                            <label for="pmsLengthloanleft">Length of Loan Left</label>
+                                                            <input type="number" class="form-control form-control-sm" id="pmsLengthloanleft">
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group">
+                                                    <label for="pmsHousevalue">House Value</label>
+                                                    <input type="number" class="form-control form-control-sm" id="pmsHousevalue">
+                                                </div>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <!--/contact information card-->
+                                </div>
+                                <!--/col1-->
+
+                                <!--col2-->
+                                <div class="col-8">
+                                    <div class="row mb-4">
+                                        <div class="col-6">
+                                            <!--policy card-->
+                                            <div id="policycard" class="card h-100 d-none">
+                                                <div class="card-header bg-warning-darker">
+                                                    <strong class="card-title">Policy Information</strong>
+                                                </div>
+                                                <div class="card-body bg-white1 rounded-bottom">    
+                                                    <!--Policy-->
+                                                    <div class="form-group">
+                                                        <label for="pmsPolicyno" class="text-dark">Policy Number</label>
+                                                        <input type="text" class="form-control form-control-sm" id="pmsPolicyno">
+                                                    </div>
+                                                    <div class="row align-items-baseline">
+                                                        <div class="col-md-6">
+                                                            <!--carrier-->
+                                                            <div class="form-group">
+                                                                <label for="pmsCarrier" class="text-dark">Carrier</label>
+                                                                <select class="form-control select2" id="pmsCarrier">
+                                                                    <option value="" selected disabled>Please select</option>
+                                                                    <option value="Aetna">Aetna</option>
+                                                                    <option value="Aflac">Aflac</option>
+                                                                    <option value="AIG/Corebridge">AIG/Corebridge</option>
+                                                                    <option value="American Amicable">American Amicable</option>
+                                                                    <option value="American Home Life">American Home Life</option>
+                                                                    <option value="Americo">Americo</option>
+                                                                    <option value="Athene">Athene</option>
+                                                                    <option value="Baltimore Life">Baltimore Life</option>
+                                                                    <option value="Bankers Fidelity">Bankers Fidelity</option>
+                                                                    <option value="Catholic Financial">Catholic Financial</option>
+                                                                    <option value="CFG">CFG</option>
+                                                                    <option value="CICA">CICA</option>
+                                                                    <option value="Cincinnati">Cincinnati</option>
+                                                                    <option value="Ethos">Ethos</option>
+                                                                    <option value="Foresters">Foresters</option>
+                                                                    <option value="Gerber Life">Gerber Life</option>
+                                                                    <option value="Great Western">Great Western</option>
+                                                                    <option value="GTL">GTL</option>
+                                                                    <option value="Prosperity">Prosperity</option>
+                                                                    <option value="Illinois Mutual">Illinois Mutual</option>
+                                                                    <option value="InstaBrain (Term)">InstaBrain (Term)</option>
+                                                                    <option value="John Hancock">John Hancock</option>
+                                                                    <option value="Kansas City Life">Kansas City Life</option>
+                                                                    <option value="Lafayette Life">Lafayette Life</option>
+                                                                    <option value="Liberty Bankers">Liberty Bankers</option>
+                                                                    <option value="Manhattan Life">Manhattan Life</option>
+                                                                    <option value="Mutual of Omaha">Mutual of Omaha</option>
+                                                                    <option value="National Life Group">National Life Group</option>
+                                                                    <option value="North American">North American</option>
+                                                                    <option value="Occidental Life">Occidental Life</option>
+                                                                    <option value="Polish Falcons">Polish Falcons</option>
+                                                                    <option value="Quility">Quility</option>
+                                                                    <option value="SBLI">SBLI</option>
+                                                                    <option value="Transamerica">Transamerica</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <div class="col-md-6">
+                                                            <!--Type of policy-->
+                                                            <div class="form-group">
+                                                                <label for="pmsTypeofpolicy" class="text-dark">Type Of Policy</label>
+                                                                <select class="form-control select2" id="pmsTypeofpolicy">
+                                                                    <option value="" selected disabled>Please select</option>
+                                                                    <option value="Term">Term</option>
+                                                                    <option value="Final Expense">Final Expense</option>
+                                                                    <option value="Universal Life">Universal Life</option>
+                                                                    <option value="Annuity">Annuity</option>
+                                                                    <option value="Accidental">Accidental</option>
+                                                                </select>
+                                                            </div> <!-- form-group -->
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <div class="row d-flex align-items-baseline">
+                                                        <div class="col-md-6">
+                                                            <!--Initial Draft-->
+                                                            <div class="form-group">
+                                                                <label for="pmsInitialDraft" class="text-dark">Initial Draft Date</label>
+                                                                <input type="date" class="form-control form-control-sm" id="pmsInitialDraft">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <!--Recurring Draft-->
+                                                            <div class="form-group">
+                                                                <label for="pmsRecurringDraft" class="text-dark">Recurring Draft Date</label>
+                                                                <input type="date" class="form-control form-control-sm" id="pmsRecurringDraft">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--monthly premium-->
+                                                    <div class="form-group">
+                                                        <label for="pmsMonthlyprem" class="text-dark">Policy Monthly Premium</label>
+                                                        <input type="number" class="form-control form-control-sm" id="pmsMonthlyprem">
+                                                    </div>                       
+                                                </div>
+                                            </div>
+                                            <!--/policy card-->
+                                        </div>
+                                        
+    
+                                        <div class="col-6">
+                                            <!--split Card-->
+                                            <div id="splitcard" class="card mb-4 d-none">
+                                                <div class="card-header bg-warning-darker">
+                                                    <strong class="card-title">Split Information</strong>
+                                                </div>
+                                                <div class="card-body">    
+                                                    <div class="form-group">
+                                                        <label for="pmsAgentsplitconfirm">Was there an Agent Split on this policy</label>
+                                                        <select class="form-control form-control-sm mb-2" id="pmsAgentsplitconfirm">
+                                                            <option value="" selected disabled>Please select</option>
+                                                            <option value="yes">Yes</option>
+                                                            <option value="no">No</option>
+                                                        </select>
+                                                    </div>
+                                                    <div id="split-groupinfo" class="row align-items-baseline d-none">
+                                                        <div class="col-6">
+                                                            <!--split amount-->
+                                                            <div class="form-group">
+                                                                <label for="pmsSplitamount">What Split % Are You Getting?</label>
+                                                                <input type="number" class="form-control form-control-sm" id="pmsSplitamount">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <!--carrier-->
+                                                            <div class="form-group">
+                                                                <label for="pmsSplitagent">Name of Agent on Split</label>
+                                                                <input type="text" class="form-control form-control-sm" id="pmsSplitagent">
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                            <!--/split card-->
+                                            <!--appointment information card-->
+                                            <div id="appointmentcard" class="card d-none">
+                                                <div class="card-header bg-warning-darker">
+                                                    <strong class="card-title">Appointment Information</strong>
+                                                </div>
+                                                <div class="card-body my-2">
+                                                    <div class="form-group">
+                                                        <label for="pmsApptresult" class="small m-0">What is the result of your appointment?*</label>
+                                                        <select class="form-control form-control-sm mt-2" id="pmsApptresult" data-live-search="true"> 
+                                                            <option value="" selected disabled>Please select</option>
+                                                            <option>Sent to Underwriting</option>
+                                                            <option>Follow-Up</option>
+                                                            <option>Instant Approval</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/appointment information card-->
+                                        </div>
+                                    </div>
+
+                                    <div id="submitcard" class="row justify-content-end d-none">
+                                        <button id="pmsCreatebtn" type="button" class="btn mb-2 btn-primary">Create Record</button>
+                                    </div>
+                                </div> 
+                                <!--col2--> 
+                            </div>
+                            <!--/Prospect Info-->
+
+                            
+                        </div>
+                    </div>
+                    
+                </div>  
+            </main> <!-- Page Content -->
+
+
+
+
+        </div> <!-- .wrapper -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/topojson.min.js"></script>
+    <script src="js/datamaps.all.min.js"></script>
+    <script src="js/datamaps-zoomto.js"></script>
+    <script src="js/datamaps.custom.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/gauge.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src='js/jquery.mask.min.js'></script>
+    <script src='js/select2.min.js'></script>
+    <script src='js/jquery.steps.min.js'></script>
+    <script src='js/jquery.validate.min.js'></script>
+    <script src='js/jquery.timepicker.js'></script>
+    <script src='js/dropzone.min.js'></script>
+    <script src='js/uppy.min.js'></script>
+    <script src='js/quill.min.js'></script>
+    <script>
+      $('.select2').select2(
+      {
+        theme: 'bootstrap4',
+      });
+      $('.select2-multi').select2(
+      {
+        multiple: true,
+        theme: 'bootstrap4',
+      });
+      $('.drgpicker').daterangepicker(
+      {
+        singleDatePicker: true,
+        timePicker: false,
+        showDropdowns: true,
+        locale:
+        {
+          format: 'MM/DD/YYYY'
+        }
+      });
+      $('.time-input').timepicker(
+      {
+        'scrollDefault': 'now',
+        'zindex': '9999' /* fix modal open */
+      });
+      /** date range picker */
+      if ($('.datetimes').length)
+      {
+        $('.datetimes').daterangepicker(
+        {
+          timePicker: true,
+          startDate: moment().startOf('hour'),
+          endDate: moment().startOf('hour').add(32, 'hour'),
+          locale:
+          {
+            format: 'M/DD hh:mm A'
+          }
+        });
+      }
+      var start = moment().subtract(29, 'days');
+      var end = moment();
+
+      function cb(start, end)
+      {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+      }
+      $('#reportrange').daterangepicker(
+      {
+        startDate: start,
+        endDate: end,
+        ranges:
+        {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+      }, cb);
+      cb(start, end);
+      $('.input-placeholder').mask("00/00/0000",
+      {
+        placeholder: "__/__/____"
+      });
+      $('.input-zip').mask('00000-000',
+      {
+        placeholder: "____-___"
+      });
+      $('.input-money').mask("#.##0,00",
+      {
+        reverse: true
+      });
+      $('.input-phoneus').mask('(000) 000-0000');
+      $('.input-mixed').mask('AAA 000-S0S');
+      $('.input-ip').mask('0ZZ.0ZZ.0ZZ.0ZZ',
+      {
+        translation:
+        {
+          'Z':
+          {
+            pattern: /[0-9]/,
+            optional: true
+          }
+        },
+        placeholder: "___.___.___.___"
+      });
+      // editor
+      var editor = document.getElementById('editor');
+      if (editor)
+      {
+        var toolbarOptions = [
+          [
+          {
+            'font': []
+          }],
+          [
+          {
+            'header': [1, 2, 3, 4, 5, 6, false]
+          }],
+          ['bold', 'italic', 'underline', 'strike'],
+          ['blockquote', 'code-block'],
+          [
+          {
+            'header': 1
+          },
+          {
+            'header': 2
+          }],
+          [
+          {
+            'list': 'ordered'
+          },
+          {
+            'list': 'bullet'
+          }],
+          [
+          {
+            'script': 'sub'
+          },
+          {
+            'script': 'super'
+          }],
+          [
+          {
+            'indent': '-1'
+          },
+          {
+            'indent': '+1'
+          }], // outdent/indent
+          [
+          {
+            'direction': 'rtl'
+          }], // text direction
+          [
+          {
+            'color': []
+          },
+          {
+            'background': []
+          }], // dropdown with defaults from theme
+          [
+          {
+            'align': []
+          }],
+          ['clean'] // remove formatting button
+        ];
+        var quill = new Quill(editor,
+        {
+          modules:
+          {
+            toolbar: toolbarOptions
+          },
+          theme: 'snow'
+        });
+      }
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function()
+      {
+        'use strict';
+        window.addEventListener('load', function()
+        {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form)
+          {
+            form.addEventListener('submit', function(event)
+            {
+              if (form.checkValidity() === false)
+              {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    <script src="js/apps.js"></script>
+    <!--VIPA JS-->
+
+  </body>
+</html>

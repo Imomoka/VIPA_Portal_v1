@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Simple bar CSS -->
+    <link rel="stylesheet" href="css/simplebar.css">
+    <!-- Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="css/feather.css">
+    <!-- Date Range Picker CSS -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/app-light.css" id="lightTheme" disabled>
+    <link rel="stylesheet" href="css/app-dark.css" id="darkTheme">
+    
+    
+    <!-- Custom for Booking -->
+    <link rel="icon" href="./assets/images/vipa-icon.png">
+    <title>VIPA Portal - Register</title>
+  </head>
+  <body class="dark ">
+    <div class="wrapper px-4 vh-100">
+      <div class="row align-items-center h-100">
+        <form id="userForm" class="col-lg-6 col-md-8 col-10 mx-auto">
+          <div class="text-center my-4">
+            <div class="w-100 mb-2 d-flex">
+              <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="#">
+              <span class="avatar avatar-lg mt-2">
+                  <img src="./assets/images/vipa-icon.png" alt="..." class="avatar-img rounded-circle">
+              </span>
+              </a>
+          </div>
+            <h2 class="my-3">Register</h2>
+          </div>
+            <div class="form-group">
+              <label for="user_npn">National Producer Number<span class="font-weight-bold text-primary"> *</span></label>
+              <input type="number" class="form-control form-control-sm" id="user_npn" placeholder="###2253" required>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="form-row">
+              <div class="form-group col-6">
+                <label for="firstname">Firstname<span class="font-weight-bold text-primary"> *</span></label>
+                <input type="text" id="firstname" class="form-control form-control-sm" required>
+              </div>
+              <div class="form-group col-6">
+                <label for="lastname">Lastname<span class="font-weight-bold text-primary"> *</span></label>
+                <input type="text" id="lastname" class="form-control form-control-sm" required>
+              </div>
+            </div>
+
+          
+
+            <div class="form-row">
+              <div class="form-group col-6">
+                <label for="user_phone">Phone<span class="font-weight-bold text-primary"> *</span></label>
+                <input id="user_phone" placeholder="(987) 654-3210" class="form-control form-control-sm input-phoneus" maxlength="14" value="" required="">
+            </div>
+              <div class="form-group col-6">
+                <label for="user_email">Email<span class="font-weight-bold text-primary"> *</span></label>
+                <input type="email" class="form-control form-control-sm" id="user_email" required>
+              </div>
+            </div>
+          
+          
+          <hr class="my-4">
+          <div class="row mb-4 p-4 rounded">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="user_password">New Password<span class="font-weight-bold text-primary"> *</span></label>
+                <input type="password" class="form-control form-control-sm" id="user_password" required>
+              </div>
+              <div class="form-group">
+                <label for="confirm_password">Confirm Password<span class="font-weight-bold text-primary"> *</span></label>
+                <input type="password" class="form-control form-control-sm" id="confirm_password" required>
+                <p id="validation_message" class="mt-2 font-weight-bold text-danger-dark d-none">*confirm password needs to match password</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-2">Password requirements</p>
+              <p class="small text-muted mb-2"> To create a new password, you have to meet all of the following requirements: </p>
+              <ul class="small text-muted pl-4 mb-0">
+                <li> Minimum 8 character </li>
+                <li>At least one special character</li>
+                <li>At least one number</li>
+                <li>Can’t be the same as a previous password </li>
+              </ul>
+            </div>
+          </div>
+          <button id="userForm_sub" class="btn btn-primary btn-block rounded" type="submit" disabled>Sign up</button>
+        </form>
+      </div>
+      <footer class="footer pb-5">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-4 mx-auto text-center">
+            <a href="javascript:;" target="_blank" class="text-secondary text-sm me-xl-5 me-3 mb-sm-0 mb-2">
+                Visit Website
+            </a>
+            <a href="javascript:;" target="_blank" class="text-secondary text-sm me-xl-5 me-3 mb-sm-0 mb-2">
+                Privacy Policy    
+            </a>
+            <a href="javascript:;" target="_blank" class="text-secondary text-sm me-xl-5 me-3 mb-sm-0 mb-2">
+                Terms and Conditions
+            </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 mx-auto text-center mt-1">
+            <p class="mb-0 text-secondary text-xs">
+                Copyright © <script>
+                document.write(new Date().getFullYear())
+                </script> by SimplyWork CRM.
+            </p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/apps.js"></script>
+    <script>
+      document.getElementById("userForm").addEventListener("input", validateForm);
+
+      function validateForm() {
+          const submitBtn = document.getElementById("userForm_sub");
+          const requiredFields = document.querySelectorAll("#userForm input[required]");
+          const password = document.getElementById("user_password").value;
+          const confirmPassword = document.getElementById("confirm_password").value;
+          const errorMessage = document.getElementById("validation_message");
+
+          let allFilled = true;
+          requiredFields.forEach(field => {
+              if (field.value.trim() === "") {
+                  allFilled = false;
+              }
+          });
+
+          // Check if passwords match
+          const passwordsMatch = password === confirmPassword;
+          errorMessage.classList.toggle("d-none", passwordsMatch); // Show error if passwords don't match
+
+          // Enable submit button only if all fields are filled AND passwords match
+          submitBtn.disabled = !(allFilled && passwordsMatch);
+      }
+
+      document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const base_url = "https://api1.simplyworkcrm.com/api:DX_C7qPf";
+            const api_ext = "/vipa_portal_user";
+            const url = `${base_url}${api_ext}`;
+
+            const payload = {
+                first_name: document.getElementById("firstname").value,
+                last_name: document.getElementById("lastname").value,
+                user_npn: Number(document.getElementById("user_npn").value),
+                phone: document.getElementById("user_phone").value,
+                email: document.getElementById("user_email").value,
+                status: "pending",
+                password: document.getElementById("confirm_password").value
+            };
+
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Form submitted successfully! Please wait while our staff approves your access.");
+                console.log("Success:", data);
+                document.getElementById("userForm").reset(); // Reset the form after successful submission
+            })
+            .catch(error => {
+                alert("Error submitting form! Please try again.");
+                console.error("Error:", error);
+            });
+        });
+
+    </script>
+  </body>
+</html>
+</body>
+</html>
